@@ -1,0 +1,279 @@
+body {
+  background-color: #f1f5ff;
+}
+
+.signupPage {
+  background-color: #1446c7;
+  width: "100%";
+  height: "100%";
+}
+
+.signupDialog {
+  min-width: 610px;
+  min-height: 642px;
+  background-color: #ffffff;
+  border: 1px;
+}
+
+.headerThird {
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+  margin-left: 100px;
+}
+
+.backArea {
+  margin: 0 5% 0 5%;
+  display: flex;
+  justify-content: start;
+}
+
+.backAreaText {
+  font-size: 14px;
+
+  cursor: pointer;
+}
+
+.backAreaText:hover {
+  text-decoration: underline;
+  font-size: 14px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.loginThird {
+  display: flex;
+  margin: auto;
+  width: 70%;
+  justify-content: space-around;
+}
+
+.nameInputs {
+  display: flex;
+  margin: auto;
+  max-width: 70%;
+}
+
+.email {
+  max-width: 67%;
+  margin: auto;
+}
+
+.password {
+  max-width: 67%;
+  margin: auto;
+}
+
+.nameInputs {
+  display: flex;
+  justify-content: space-around;
+}
+
+.nameInput {
+  width: 166px;
+  height: 16px;
+
+  font-family: "Interstate";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 17px;
+  display: flex;
+  align-items: center;
+
+  color: #757575;
+
+  /* Inside auto layout */
+  flex: none;
+  order: 0;
+  flex-grow: 1;
+}
+
+.container {
+  position: relative;
+  margin: 20px 0;
+  width: 190px;
+  background-color: #f1f5ff;
+}
+
+.containerEmail {
+  position: relative;
+  margin: 20px auto;
+  width: 400px;
+  background-color: #f1f5ff;
+}
+
+.containerPassword {
+  position: relative;
+  margin: 0px auto;
+  width: 400px;
+  background-color: #f1f5ff;
+}
+input {
+  font-size: 18px;
+  padding: 10px 10px 10px 5px;
+  display: block;
+  width: 100%;
+  border: none;
+  background-color: transparent;
+}
+input:focus {
+  outline: none;
+}
+label {
+  color: #999;
+  font-size: 18px;
+  font-weight: normal;
+  position: absolute;
+  pointer-events: none;
+  left: 5%;
+  top: 10%;
+  transition: 0.2s ease all;
+}
+input:focus ~ label,
+input:valid ~ label {
+  top: 3px;
+  left: 5px;
+  font-size: 10px;
+  color: #5264ae;
+}
+.bar {
+  position: relative;
+  display: block;
+  width: 100%;
+}
+.bar:before,
+.bar:after {
+  content: "";
+  height: 2px;
+  width: 0;
+  position: absolute;
+  background: #5264ae;
+  transition: 0.2s ease all;
+}
+.bar:before {
+  left: 50%;
+}
+.bar:after {
+  right: 50%;
+}
+input:focus ~ .bar:before,
+input:focus ~ .bar:after {
+  width: 50%;
+}
+
+.contentPassword {
+  display: flex;
+}
+
+.checkGroup {
+  margin: auto;
+  width: 410px;
+}
+
+.checkBox {
+  /* box (Stroke) */
+
+  width: 18px;
+  height: 18px;
+
+  background: #ababab;
+
+  /* Inside auto layout */
+  flex: none;
+  order: 0;
+  flex-grow: 0;
+}
+
+.checkGroup {
+  display: flex;
+  align-items: center;
+  width: 410px;
+  height: 20px;
+  margin-top: 5%;
+  margin-bottom: 5%;
+}
+
+.checkContent {
+  /* By creating account, you agree to accept our Privacy Policy, Terms of Service and Notification settings. */
+
+  width: 364px;
+  height: 32px;
+
+  font-family: "Interstate";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 13px;
+  line-height: 16px;
+  display: flex;
+  align-items: center;
+
+  color: #757575;
+
+  /* Inside auto layout */
+  flex: none;
+  order: 1;
+  flex-grow: 0;
+}
+
+.submitButton {
+  background: #3c71ff;
+  display: flex;
+  color: white;
+  width: 410px;
+  height: 50px;
+  align-items: center;
+  justify-content: center;
+  margin: auto;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.notice {
+  display: flex;
+  justify-content: center;
+}
+
+.alert {
+  /* Notification */
+
+  /* Auto layout */
+  display: flex;
+  justify-self: center;
+  justify-content: center;
+  align-items: center;
+  gap: 8px;
+
+  width: 400px;
+  height: 80px;
+
+  background: #f5c4c6;
+  border: 1px solid #d71920;
+  border-radius: 4px;
+
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+
+.passwordInput {
+  display: flex;
+  justify-content: space-between;
+}
+
+.rules {
+  display: flex;
+  align-items: center;
+}
+
+.rulesFalse {
+  display: flex;
+  align-items: center;
+}
+
+.ruleGroup {
+  display: flex;
+}
+
+.rule {
+  font-size: 10px;
+}
