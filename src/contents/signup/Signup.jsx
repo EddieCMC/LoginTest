@@ -39,6 +39,7 @@ const Signup = () => {
 
   const containsNumber = (str) => {
     const regex = /\d/
+
     return regex.test(str)
   }
 
@@ -53,6 +54,7 @@ const Signup = () => {
       setPasswordNumber(false)
     }
     setShowPassword(!showPassword)
+    passwordRef.current.focus()
   }
 
   const handleMouseOver = () => {
@@ -102,21 +104,31 @@ const Signup = () => {
   const checkRule = (pass) => {
     if (pass.length > 8) {
       setPasswordLength(true)
+      if (containsNumber(pass)) {
+        setPasswordNumber(true)
+      }
     } else if (containsNumber(pass)) {
       setPasswordNumber(true)
     } else {
       setPasswordLength(false)
       setPasswordNumber(false)
     }
+    passwordRef.current.focus()
   }
 
   useEffect(() => {
     checkRule(password)
-    passwordRef.current.focus()
+
     if (password.length == 0) {
       setCheckTrigger(false)
+      setPasswordLength(false)
+      setPasswordNumber(false)
     }
   }, [password])
+
+  useEffect(() => {
+    passwordRef.current.focus()
+  }, [passwordNumber, passwordLength])
 
   const Content = () => {
     const [checked, setChecked] = useState(false)
@@ -215,12 +227,11 @@ const Signup = () => {
           </div>
 
           <div className="footerThird">
-            <p>Or use your email for registration</p>
+            <p className="horizontal-line-after">Or use your email for registration</p>
           </div>
         </div>
 
         <div>
-          InputValue
           <div className="nameInputs">
             <div className="container">
               <input type="text" ref={inputRef} value={firstName} onChange={handleChangeFirst} required /> <label className={firstName ? "active" : ""}>First Name</label> <div className="bar"></div>
